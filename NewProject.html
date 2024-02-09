@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>52House's Menu</title>
+    <script>
+    function submitForm() {
+        // Accessing the text input value
+        var textValue = document.getElementById('textInput').value;
+        console.log('Text Input:', textValue);
+    
+        // Accessing the selected radio button value
+        var radios = document.getElementsByName('radioGroup');
+        var radioValue;
+        for (var i = 0; i < radios.length; i++) {
+            if (radios[i].checked) {
+                radioValue = radios[i].value;
+                break;
+            }
+        }
+        console.log('Selected Radio:', radioValue);
+    }
+    </script>
+</head>
+
+<body>
+    <h1>52House's Menu</h1>
+
+    <form>
+        <section>
+            <input type="radio" name="radioGroup" id="Breakfast" value="Breakfast">
+            <lable for="Breakfast">Breakfast</lable>
+            <input type="radio" name="radioGroup" id="Lunch" value="Lunch">
+            <lable for="Lunch">Lunch</lable>
+            <input type="radio" name="radioGroup" id="Dinner" value="Dinner">
+            <lable for="Dinner">Dinner</lable>
+        </section>
+        
+        <section>
+            <input type="text" name="food" id="textInput">
+            <label for="food">Name of foods</label>
+        </section>
+
+        <section>
+            <button onclick="submitForm()">Submit</button>
+        </section>
+
+
+    </form>
+</body>
+
+</html>
